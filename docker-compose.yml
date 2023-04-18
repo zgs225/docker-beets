@@ -1,0 +1,11 @@
+version: '3'
+services:
+  beets:
+    image: yuezzzzzzzzzzz/beets:latest
+    volumes:
+      - ./data/config:/config
+      - ./data/music:/music
+      - ./data/src:/src
+    command:
+      - import
+      - /src

@@ -1,0 +1,20 @@
+library: /config/library.db
+directory: /music
+art_filename: albumart
+import:
+  write: yes
+  copy: yes
+  group_albums: yes
+  duplicate_action: remove
+  quiet: yes
+  quiet_fallback: asis
+  incremental: yes
+  from_scratch: yes
+plugins: convert chroma bpm fetchart lyrics inline
+paths:
+  default: $genre/$albumartist/$album/$track $title
+  singleton: Singletons/$artist - $title
+  comp: $genre/$album/$track $title
+  albumtype:soundtrack: Soundtracks/$album/$track $title
+convert:
+  auto: yes
