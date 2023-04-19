@@ -12,9 +12,9 @@ import:
   from_scratch: yes
 plugins: convert chroma bpm fetchart lyrics inline
 paths:
-  default: $genre/$albumartist/$album/$track $title
+  default: $albumartist/$album/$title
   singleton: Singletons/$artist - $title
-  comp: $genre/$album/$track $title
-  albumtype:soundtrack: Soundtracks/$album/$track $title
+  comp: $album/$track $title
+  albumtype:soundtrack: Soundtracks/$album/$title
 convert:
   auto: yes
