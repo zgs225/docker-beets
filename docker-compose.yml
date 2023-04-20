@@ -3,9 +3,9 @@ services:
   beets:
     image: yuezzzzzzzzzzz/beets:latest
     volumes:
-      - ./data/config:/config
-      - ./data/music:/music
-      - ./data/src:/src
+      - $local_config_dir:/config
+      - $local_output_dir:/music
+      - $local_source_dir:/src
     command:
       - import
       - /src

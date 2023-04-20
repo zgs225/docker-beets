@@ -14,6 +14,8 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip install pyacoustid \
+    flask \
+    flask-cors \
     beets[thumbnails] \
     beets[bpd] \
     beets[bpm] \

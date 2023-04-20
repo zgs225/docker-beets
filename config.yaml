@@ -8,9 +8,11 @@ import:
   duplicate_action: remove
   quiet: yes
   quiet_fallback: asis
+  resume: yes
   incremental: yes
   from_scratch: yes
-plugins: convert chroma bpm fetchart lyrics inline
+  languages: zh zh_CN zh_TW en jp
+plugins: convert chroma bpm fetchart lyrics inline web
 paths:
   default: $albumartist/$album/$title
   singleton: Singletons/$artist - $title
@@ -18,3 +20,6 @@ paths:
   albumtype:soundtrack: Soundtracks/$album/$title
 convert:
   auto: yes
+web:
+  host: 0.0.0.0
+  port: 26602
