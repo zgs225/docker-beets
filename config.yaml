@@ -18,6 +18,10 @@ match:
     countries: ['CN', 'HK', 'TW', 'US', 'GB|UK']
     media: ['CD', 'Digital Media|File']
     original_year: yes
+paths:
+  default: $albumartist/$album%aunique{}/$title
+  singleton: Non-Album/$artist/$title
+  comp: Compilations/$album%aunique{}/$title
 convert:
   auto: yes
 chroma:
