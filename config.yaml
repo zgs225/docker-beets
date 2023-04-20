@@ -13,15 +13,17 @@ import:
   from_scratch: yes
   languages: zh zh_CN zh_TW en jp
 plugins: convert chroma discogs fetchart embedart lyrics inline web bpm
-paths:
-  default: $albumartist/$album/$title
-  singleton: Singletons/$artist - $title
-  comp: $album/$track $title
-  albumtype:soundtrack: Soundtracks/$album/$title
+match:
+  preferred:
+    countries: ['CN', 'HK', 'TW', 'US', 'GB|UK']
+    media: ['CD', 'Digital Media|File']
+    original_year: yes
 convert:
   auto: yes
 chroma:
   auto: yes
+musicbrainz:
+  genres: yes
 discogs:
   user_token: FQBmWfjUiooaXJSfwoJPlBbwKRIBMaZmSJdThQie
 lyrics:
