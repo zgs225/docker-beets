@@ -16,13 +16,16 @@ RUN apt-get update \
 RUN pip install pyacoustid \
     flask \
     flask-cors \
+    requests \
+    beautifulsoup4 \
     beets[thumbnails] \
     beets[bpd] \
     beets[bpm] \
     beets[fetchart] \
     beets[lyrics] \
     beets[inline] \
-    beets[chroma]
+    beets[chroma] \
+    beets[discogs]
 
 ARG UID=1000
 ARG GID=1000
